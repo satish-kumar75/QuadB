@@ -32,7 +32,9 @@ const Header = ({ onAddTask, onFetchUserLocation }) => {
 
   const handleSignout = () => {
     signOut(auth)
-      .then(() => {})
+      .then(() => {
+        toast.success("Logged out successfully");
+      })
       .catch((error) => {
         console.log(error);
       });
