@@ -20,7 +20,7 @@ const ProtectedRoute = ({ element, ...rest }) => {
 const App = () => {
   return (
     <Router>
-      <div className="bg-haiti-950 to-90% min-h-screen text-purple-heart-200 font-sans">
+      <div className="bg-haiti-950 to-90% min-h-screen w-full overflow-x-hidden text-purple-heart-200 font-sans">
         <Routes>
           <Route path="/" element={<Login />} />
           <Route

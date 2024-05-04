@@ -12,7 +12,8 @@ import {
 const TaskList = ({ tasks, editTask, deleteTask, weather }) => {
   const getWeatherIcon = (weatherDescription) => {
     switch (weatherDescription) {
-      case "clear sky":
+      case "Clear Sky":
+      case "Clear":
         return <FaSun size={20} color="yellow" />;
       case "Few Clouds":
       case "Scattered Clouds":
@@ -71,7 +72,7 @@ const TaskList = ({ tasks, editTask, deleteTask, weather }) => {
       {sortedTasks.map((task, index) => (
         <div
           key={index}
-          className="p-6 rounded-lg shadow-xl bg-purple-heart-950/50 border border-purple-heart-600 relative"
+          className="p-6 min-w-fit rounded-lg shadow-xl bg-purple-heart-950/50 border border-purple-heart-600 relative"
         >
           <div className="flex justify-between border-b border-purple-400 mb-4 pb-4">
             <div className="flex gap-4">
@@ -93,7 +94,7 @@ const TaskList = ({ tasks, editTask, deleteTask, weather }) => {
               <div className="text-sm text-purple-heart-300 flex gap-2 items-center">
                 {getWeatherIcon(weather.weather[0].main)}
                 <div>
-                  <p>{weather.weather[0].description}</p>
+                  <p>{weather.weather[0].main}</p>
                   <p>{weather.main.temp}°C</p>
                 </div>
               </div>
@@ -101,13 +102,13 @@ const TaskList = ({ tasks, editTask, deleteTask, weather }) => {
           </div>
 
           <div className="flex items-center justify-between">
-            <p className="text-sm text-purple-heart-300 mb-4 flex items-center gap-3">
+            <p className="text-sm text-purple-heart-300 flex items-center gap-3">
               <FaRegCalendarAlt />
               {task.date}
             </p>
-            <div className="flex items-center">
+            <div className="flex items-center gap-2">
               <button
-                className="text-purple-heart-500 hover:text-purple-heart-300 mr-2 focus:outline-none"
+                className="text-purple-heart-500 hover:text-purple-heart-300 focus:outline-none"
                 onClick={() => editTask(task.id)}
               >
                 <RiEdit2Line size={20} />
