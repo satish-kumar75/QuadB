@@ -74,7 +74,7 @@ const TaskList = ({ tasks, editTask, deleteTask, weather }) => {
           key={index}
           className="p-6 rounded-lg shadow-xl bg-purple-heart-950/50 border border-purple-heart-600 relative"
         >
-          <div className="flex gap-3 border-b border-purple-400 mb-4 pb-4">
+          <div className="flex justify-between border-b border-purple-400 mb-4 pb-4">
             <div className="flex gap-4">
               <div className="max-w-28">
                 <p className="text-lg font-semibold mb-2">{task.title}</p>
