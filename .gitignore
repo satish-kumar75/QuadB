@@ -12,8 +12,6 @@ dist
 dist-ssr
 *.local
 
-/.pnp
-.pnp.js
 .env
 
 # Editor directories and files

@@ -11,6 +11,7 @@ import { useDispatch } from "react-redux";
 import { addUser } from "../store/userSlice";
 import Header from "../components/Header";
 import login from "../assets/login.svg";
+import { Toaster, toast } from "sonner";
 
 const Login = () => {
   const [isSignIn, setIsSignIn] = useState(true);
@@ -49,6 +50,7 @@ const Login = () => {
       }
     } catch (error) {
       console.error("Authentication error:", error);
+      toast.error("Invalid credentials");
     }
   };
 
@@ -58,6 +60,7 @@ const Login = () => {
 
   return (
     <div>
+      <Toaster position="top-center" richColors />
       <Header />
       <div className="login flex flex-col items-center justify-center p-7 sm:p-0">
         <div className="w-full md:w-3/4 lg:w-8/12 bg-purple-heart-950 p-10 rounded-lg text-purple-heart-200">

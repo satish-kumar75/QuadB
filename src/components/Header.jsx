@@ -6,6 +6,7 @@ import { auth } from "../store/firebase";
 import { useEffect } from "react";
 import { addUser, removeUser } from "../store/userSlice";
 import { useNavigate } from "react-router-dom";
+import { Toaster, toast } from "sonner";
 
 const Header = ({ onAddTask, onFetchUserLocation }) => {
   const dispatch = useDispatch();
@@ -19,6 +20,7 @@ const Header = ({ onAddTask, onFetchUserLocation }) => {
         const { uid, email, displayName } = user;
         dispatch(addUser({ uid: uid, email: email, displayName: displayName }));
         navigate("/home");
+        toast.success("Logged in successfully");
       } else {
         dispatch(removeUser());
         navigate("/");
@@ -38,6 +40,7 @@ const Header = ({ onAddTask, onFetchUserLocation }) => {
 
   return (
     <header className="bg-haiti-900/20 p-4">
+      <Toaster position="top-center" richColors />
       <div className="container mx-auto flex justify-between items-center">
         <h1 className="text-3xl font-bold">To-Do App</h1>
         {user ? (
