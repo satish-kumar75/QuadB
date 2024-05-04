@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+.priority-high {
+  background-color: #ff4d4f; 
+  color: #fff;
+}
+
+.priority-medium {
+  background-color: #faad14;
+  color: #fff;
+}
+
+.priority-low {
+  background-color: #52c41a;
+  color: #fff;
+}
+.login{
+  min-height: 88vh;
+}
