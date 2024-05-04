@@ -76,7 +76,7 @@ const TaskList = ({ tasks, editTask, deleteTask, weather }) => {
         >
           <div className="flex gap-3 border-b border-purple-400 mb-4 pb-4">
             <div className="flex gap-4">
-              <div className="max-w-36">
+              <div className="max-w-28">
                 <p className="text-lg font-semibold mb-2">{task.title}</p>
                 <p className="text-sm text-purple-heart-300 mb-2">
                   {task.description}
