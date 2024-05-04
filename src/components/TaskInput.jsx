@@ -54,7 +54,7 @@ const TaskInput = ({ addTask, updateTask, editedTask, setShowModal }) => {
   return (
     <div className="bg-black bg-opacity-50 fixed inset-0 flex justify-center items-center">
       <Toaster position="top-center"  richColors />
-      <div className="bg-purple-heart-950 p-8 rounded-lg w-1/2 text-purple-heart-200">
+      <div className="bg-purple-heart-950 p-8 rounded-lg md:w-9/12 sm:w-1/2 lg:w-1/2 text-purple-heart-200">
         <h2 className="text-2xl font-bold mb-4">
           {editedTask ? "Edit Task" : "Add New Task"}
         </h2>
